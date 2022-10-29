@@ -3,9 +3,8 @@ import { Grid, Checkbox, FormControlLabel, Container } from "@mui/material";
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const ToDoItem = ({ name,checked }) => {
+const ToDoItem = ({ name, checked }) => {
     return (
-
         <Grid container
             spacing={10}
         >
@@ -18,7 +17,6 @@ const ToDoItem = ({ name,checked }) => {
                 </IconButton>
             </Grid>
         </Grid>
-
     )
 
 }
