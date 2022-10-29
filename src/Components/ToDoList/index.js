@@ -14,7 +14,7 @@ const ToDoList = () => {
             <Grid xs={12} item>
                 <FormGroup  >
                     {list.map(item => {
-                        return <ToDoItem name={item.name} />
+                        return <ToDoItem checked={true} name={item.name} />
                     })
                     }
                 </FormGroup>
