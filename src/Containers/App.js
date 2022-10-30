@@ -12,7 +12,6 @@ function App() {
   if (loading) return <div className='Loading'><CircularProgress size={120} /></div>
   if (error) return <div className='Loading'><Alert severity="error">An error occurred while loading data...</Alert></div>
 
-  console.log(data);
   return (
     <div className="App">
       <Grid container>
