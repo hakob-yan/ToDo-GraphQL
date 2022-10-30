@@ -10,7 +10,7 @@ const ToDoList = () => {
         <Grid xs={12} item>
             <FormGroup  >
                 {data && data.allTodos.map(item => {
-                    return <ToDoItem key={item.id} checked={item.completed} name={item.title} />
+                    return <ToDoItem id={item.id} key={item.id} checked={item.completed} name={item.title} />
                 })
                 }
             </FormGroup>

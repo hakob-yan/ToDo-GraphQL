@@ -12,7 +12,6 @@ const AddToDo = () => {
     const [adToDo, { data, error, loading }] = useMutation(ADD_TO_DO, {
         update(cache, data) {
             const { createTodo } = data.data;
-            console.log(createTodo);
             const { allTodos: todos } = cache.readQuery({ query: GET_TO_DOS })
             cache.writeQuery({
                 query: GET_TO_DOS,
@@ -39,15 +38,17 @@ const AddToDo = () => {
         }
     }
     const handleClick = () => {
-        adToDo({
-            variables: {
-                title: text,
-                user_id: 12,
-                completed: false
+        if (text.trim().length) {
+            adToDo({
+                variables: {
+                    title: text,
+                    user_id: 12,
+                    completed: false
 
-            }
-        })
-        setText('')
+                }
+            })
+            setText('')
+        }
 
     }
     if (loading) return <div className='Loading'><CircularProgress size={120} /></div>
